@@ -26,6 +26,7 @@
 		17645EEA29C761AF00D4C874 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		17645EEC29C7624900D4C874 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		17645EEE29C7682700D4C874 /* Range-Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Range-Position.swift"; sourceTree = "<group>"; };
+		17645F0329C775D900D4C874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 		17645ECF29C7613600D4C874 = {
 			isa = PBXGroup;
 			children = (
+				17645F0329C775D900D4C874 /* README.md */,
 				17645EDA29C7613600D4C874 /* RegexCoach */,
 				17645ED929C7613600D4C874 /* Products */,
 			);
