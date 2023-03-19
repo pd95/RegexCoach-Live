@@ -10,7 +10,6 @@
 		17645EDC29C7613600D4C874 /* RegexCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EDB29C7613600D4C874 /* RegexCoachApp.swift */; };
 		17645EDE29C7613600D4C874 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EDD29C7613600D4C874 /* ContentView.swift */; };
 		17645EE029C7613700D4C874 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17645EDF29C7613700D4C874 /* Assets.xcassets */; };
-		17645EE429C7613700D4C874 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17645EE329C7613700D4C874 /* Preview Assets.xcassets */; };
 		17645EEB29C761AF00D4C874 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEA29C761AF00D4C874 /* Match.swift */; };
 		17645EED29C7624900D4C874 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEC29C7624900D4C874 /* ViewModel.swift */; };
 		17645EEF29C7682700D4C874 /* Range-Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEE29C7682700D4C874 /* Range-Position.swift */; };
@@ -22,7 +21,6 @@
 		17645EDD29C7613600D4C874 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17645EDF29C7613700D4C874 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17645EE129C7613700D4C874 /* RegexCoach.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RegexCoach.entitlements; sourceTree = "<group>"; };
-		17645EE329C7613700D4C874 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		17645EEA29C761AF00D4C874 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		17645EEC29C7624900D4C874 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		17645EEE29C7682700D4C874 /* Range-Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Range-Position.swift"; sourceTree = "<group>"; };
@@ -67,17 +65,8 @@
 				17645EEE29C7682700D4C874 /* Range-Position.swift */,
 				17645EDF29C7613700D4C874 /* Assets.xcassets */,
 				17645EE129C7613700D4C874 /* RegexCoach.entitlements */,
-				17645EE229C7613700D4C874 /* Preview Content */,
 			);
 			path = RegexCoach;
-			sourceTree = "<group>";
-		};
-		17645EE229C7613700D4C874 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				17645EE329C7613700D4C874 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +127,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17645EE429C7613700D4C874 /* Preview Assets.xcassets in Resources */,
 				17645EE029C7613700D4C874 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +266,6 @@
 				CODE_SIGN_ENTITLEMENTS = RegexCoach/RegexCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RegexCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = P8CC95REUG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -316,7 +303,6 @@
 				CODE_SIGN_ENTITLEMENTS = RegexCoach/RegexCoach.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RegexCoach/Preview Content\"";
 				DEVELOPMENT_TEAM = P8CC95REUG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
