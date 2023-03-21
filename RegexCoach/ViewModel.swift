@@ -51,7 +51,7 @@ class ViewModel: ObservableObject {
                 let wholeText = String(input[result.range])
                 if wholeText.isEmpty { return nil }
 
-                var wholeMatch = Match(text: wholeText, position: result.range.position(in: input))
+                var wholeMatch = Match(text: wholeText, position: result.range.position(in: input), range: result.range)
 
                 if result.count > 1 {
                     wholeMatch.groups = [Match]()
@@ -63,7 +63,7 @@ class ViewModel: ObservableObject {
                         let matchText = String(input[range])
                         if matchText.isEmpty { continue }
 
-                        let partMatch = Match(text: matchText, position: range.position(in: input))
+                        let partMatch = Match(text: matchText, position: range.position(in: input), range: range)
                         wholeMatch.groups?.append(partMatch)
                     }
                 }

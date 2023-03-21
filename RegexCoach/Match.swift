@@ -12,4 +12,6 @@ struct Match: Identifiable {
     var text: String
     var position: String
     var groups: [Match]?
+    var range: Range<String.Index>
+    var replacement: String = ""
 }
