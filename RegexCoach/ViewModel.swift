@@ -62,6 +62,11 @@ class ViewModel: ObservableObject {
 
                         let matchText = String(input[range])
 
+                        // Replace "named group" placeholder
+                        if let matchName = match.name {
+                            matchReplacement = matchReplacement.replacing("$\(matchName)", with: matchText)
+                        }
+
                         // Replace "indexed group" placeholder"
                         matchReplacement = matchReplacement.replacing("$\(part)", with: matchText)
 
