@@ -13,6 +13,7 @@
 		17645EEB29C761AF00D4C874 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEA29C761AF00D4C874 /* Match.swift */; };
 		17645EED29C7624900D4C874 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEC29C7624900D4C874 /* ViewModel.swift */; };
 		17645EEF29C7682700D4C874 /* Range-Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645EEE29C7682700D4C874 /* Range-Position.swift */; };
+		17645F0529CA483700D4C874 /* RegexOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17645F0429CA483700D4C874 /* RegexOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		17645EEC29C7624900D4C874 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		17645EEE29C7682700D4C874 /* Range-Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Range-Position.swift"; sourceTree = "<group>"; };
 		17645F0329C775D900D4C874 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		17645F0429CA483700D4C874 /* RegexOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				17645EDB29C7613600D4C874 /* RegexCoachApp.swift */,
 				17645EDD29C7613600D4C874 /* ContentView.swift */,
 				17645EEA29C761AF00D4C874 /* Match.swift */,
+				17645F0429CA483700D4C874 /* RegexOptions.swift */,
 				17645EEC29C7624900D4C874 /* ViewModel.swift */,
 				17645EEE29C7682700D4C874 /* Range-Position.swift */,
 				17645EDF29C7613700D4C874 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17645F0529CA483700D4C874 /* RegexOptions.swift in Sources */,
 				17645EDE29C7613600D4C874 /* ContentView.swift in Sources */,
 				17645EDC29C7613600D4C874 /* RegexCoachApp.swift in Sources */,
 				17645EED29C7624900D4C874 /* ViewModel.swift in Sources */,

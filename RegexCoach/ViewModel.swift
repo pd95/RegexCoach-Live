@@ -11,6 +11,7 @@ class ViewModel: ObservableObject {
     @AppStorage("pattern") var pattern = "" { didSet { if oldValue != pattern { update() } } }
     @AppStorage("input") var input = "Text to match here" { didSet { if oldValue != input { update() } } }
     @AppStorage("replacement") var replacement = "" { didSet { if oldValue != replacement { update() } } }
+    @AppStorage("regexOptions") var options: RegexOptions = [] { didSet { if oldValue != options { update() } } }
 
     @Published var replacementOutput = ""
     @Published var matches = [Match]()
@@ -42,7 +43,10 @@ class ViewModel: ObservableObject {
         guard pattern.isEmpty == false else { return }
 
         do {
-            let regex = try Regex(pattern)
+            var regex = try Regex(pattern)
+            regex = regex.ignoresCase(options.contains(.ignoresCase))
+            regex = regex.anchorsMatchLineEndings(options.contains(.anchorsMatchLineEndings))
+            regex = regex.dotMatchesNewlines(options.contains(.dotMatchesNewlines))
             let results = input.matches(of: regex)
             isValid = true
 

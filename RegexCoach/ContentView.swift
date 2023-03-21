@@ -35,6 +35,13 @@ struct ContentView: View {
                 .fixedSize()
             }
 
+            HStack {
+                Toggle("Case insensitive", isOn: $model.options[.ignoresCase])
+                Toggle("Anchors match line endings", isOn: $model.options[.anchorsMatchLineEndings])
+                Toggle(". matches newline", isOn: $model.options[.dotMatchesNewlines])
+                Spacer()
+            }
+
             TextEditor(text: $model.input)
                 .padding(5)
                 .border(.quaternary)
