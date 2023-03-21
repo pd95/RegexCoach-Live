@@ -44,33 +44,50 @@ class ViewModel: ObservableObject {
         do {
             let regex = try Regex(pattern)
             let results = input.matches(of: regex)
-            replacementOutput = input.replacing(regex, with: replacement)
             isValid = true
 
-            matches = results.compactMap({ result in
-                let wholeText = String(input[result.range])
+            matches = results.compactMap({ (regexMatch: Regex<AnyRegexOutput>.Match) -> Match? in
+                let wholeText = String(input[regexMatch.range])
                 if wholeText.isEmpty { return nil }
 
-                var wholeMatch = Match(text: wholeText, position: result.range.position(in: input), range: result.range)
+                var wholeMatch = Match(text: wholeText, position: regexMatch.range.position(in: input), range: regexMatch.range)
 
-                if result.count > 1 {
+                // Replace "whole match placeholder" (if found)
+                var matchReplacement = replacement.replacing("$0", with: wholeText)
+                if regexMatch.count > 1 {
                     wholeMatch.groups = [Match]()
-
-                    for part in result.indices.dropFirst() {
-                        let match = result[part]
+                    for part in regexMatch.indices.dropFirst() {
+                        let match = regexMatch[part]
                         guard let range = match.range else { continue }
 
                         let matchText = String(input[range])
+
+                        // Replace "indexed group" placeholder"
+                        matchReplacement = matchReplacement.replacing("$\(part)", with: matchText)
+
                         if matchText.isEmpty { continue }
 
                         let partMatch = Match(text: matchText, position: range.position(in: input), range: range)
                         wholeMatch.groups?.append(partMatch)
                     }
                 }
+                wholeMatch.replacement = matchReplacement
 
                 return wholeMatch
             })
+
+            // Generate replacement output by applying all match replacements
+            var output = [Substring]()
+            var lastIndex = input.startIndex
+            for match in matches {
+                output.append(input[lastIndex..<match.range.lowerBound])
+                output.append(match.replacement[...])
+                lastIndex = match.range.upperBound
+            }
+            output.append(input[lastIndex..<input.endIndex])
+            replacementOutput = output.joined()
         } catch {
+            print("🔴", error)
             matches.removeAll()
             replacementOutput = ""
             isValid = false
