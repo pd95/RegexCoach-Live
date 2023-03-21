@@ -43,10 +43,11 @@ class ViewModel: ObservableObject {
         guard pattern.isEmpty == false else { return }
 
         do {
-            var regex = try Regex(pattern)
-            regex = regex.ignoresCase(options.contains(.ignoresCase))
-            regex = regex.anchorsMatchLineEndings(options.contains(.anchorsMatchLineEndings))
-            regex = regex.dotMatchesNewlines(options.contains(.dotMatchesNewlines))
+            let regex = try Regex(pattern)
+                .ignoresCase(options.contains(.ignoresCase))
+                .anchorsMatchLineEndings(options.contains(.anchorsMatchLineEndings))
+                .dotMatchesNewlines(options.contains(.dotMatchesNewlines))
+
             let results = input.matches(of: regex)
             isValid = true
 
