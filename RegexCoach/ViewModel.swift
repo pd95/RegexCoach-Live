@@ -8,9 +8,9 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @AppStorage("pattern") var pattern = "" { didSet { update() } }
-    @AppStorage("input") var input = "Text to match here" { didSet { update() } }
-    @AppStorage("replacement") var replacement = "" { didSet { update() } }
+    @AppStorage("pattern") var pattern = "" { didSet { if oldValue != pattern { update() } } }
+    @AppStorage("input") var input = "Text to match here" { didSet { if oldValue != input { update() } } }
+    @AppStorage("replacement") var replacement = "" { didSet { if oldValue != replacement { update() } } }
 
     @Published var replacementOutput = ""
     @Published var matches = [Match]()
